@@ -6,7 +6,7 @@
   2. **Trần Thanh Huyền** — MSSV: `2A202601578` _(Kỹ sư AI chính)_
   3. **Thiều Thị Ngọc Ánh** — MSSV: `2A202601864` _(Kỹ sư Dữ liệu, Backend & Kiểm thử)_
 - **Tên dự án:** **NutriMenu AI** — Trợ lý AI Kiểm tra Dinh dưỡng & Cảnh báo Dị ứng Thực đơn Bán trú
-- **Link sản phẩm/demo (nếu có):** `https://github.com/anhdotu0912/Track1_Day27_Team68_DuAn68`
+- **Link sản phẩm/demo (nếu có):** `https://github.com/anhdotu0912/Track1_Day27_Team68_NutriMenu-AI`
 
 ---
 
@@ -40,7 +40,7 @@
 
 ### 4. Quy ước nộp bài
 
-- Toàn bộ bài làm được lưu tại `README.md` trên GitHub repo: `Track1_Day27_Team68_DuAn68`.
+- Toàn bộ bài làm được lưu tại `README.md` trên GitHub repo: `Track1_Day27_Team68_NutriMenu-AI`.
 - Xuất file PDF tóm tắt 4 trang (`Day27_AI-Team-Lab_Team68.pdf`) đính kèm trong repo.
 - Người chịu trách nhiệm nộp bài: Đỗ Tú Anh.
 
@@ -359,7 +359,7 @@ Từng thành viên tự chấm điểm độc lập:
 
 ### 2. Danh mục Hồ sơ Nộp Bài
 
-- **Link GitHub Repository:** `https://github.com/anhdotu0912/Track1_Day27_Team68_DuAn68`
+- **Link GitHub Repository:** `https://github.com/anhdotu0912/Track1_Day27_Team68_NutriMenu-AI`
 - **File PDF Nộp Kèm:** `Day27_AI-Team-Lab_Team68.pdf` (Đúng chuẩn 4 trang):
   - **Trang 1:** Bản đồ 7 bên liên quan, phân loại 4 nhóm và kế hoạch hành động 1–2 tuần tới.
   - **Trang 2:** Đề xuất "Kết luận trước" gửi Hiệu trưởng, cách trả lời phản biện và Bảng phân quyền RACI 6 việc.
