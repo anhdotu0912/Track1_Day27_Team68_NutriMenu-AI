@@ -2,389 +2,360 @@
 
 - **Team:** Team 68
 - **Thành viên (3–5 người):**
-  1. **Đỗ Tú Anh** — MSSV: `2A202601272` _(Trưởng nhóm / Product Owner)_
-  2. **Trần Thanh Huyền** — MSSV: `2A202601578` _(Lead AI Engineer)_
-  3. **Thiều Thị Ngọc Ánh** — MSSV: `2A202601864` _(Backend, Data & QA Specialist)_
-- **Tên dự án:** **NutriMenu AI** — Hệ thống AI Thẩm định Dinh dưỡng & Cảnh báo Dị ứng Thực đơn Bán trú
+  1. **Đỗ Tú Anh** — MSSV: `2A202601272` *(Trưởng nhóm / Quản lý sản phẩm)*
+  2. **Trần Thanh Huyền** — MSSV: `2A202601578` *(Kỹ sư AI chính)*
+  3. **Thiều Thị Ngọc Ánh** — MSSV: `2A202601864` *(Kỹ sư Dữ liệu, Backend & Kiểm thử)*
+- **Tên dự án:** **NutriMenu AI** — Trợ lý AI Kiểm tra Dinh dưỡng & Cảnh báo Dị ứng Thực đơn Bán trú
 - **Link sản phẩm/demo (nếu có):** `https://github.com/anhdotu0912/Track1_Day27_Team68_DuAn68`
 
 ---
 
-## 📌 Phase 0: Chốt Phạm vi & Cách làm (Scope & Ground Rules)
+## 📌 Phase 0: Chốt Phạm vi & Cách làm việc chung
 
-### 1. Thông tin Đội ngũ (Team 68)
-
-- **Quy mô:** 3 thành viên.
-- **Danh sách thành viên & Phân công vai trò:**
-  1. **Đỗ Tú Anh** (MSSV: `2A202601272`) — _Trưởng nhóm (Team Lead) & Product Owner_ (Chịu trách nhiệm tổng hợp bài nộp, quản lý GitHub repository và điều phối chung).
-  2. **Trần Thanh Huyền** (MSSV: `2A202601578`) — _Lead AI / LLM Engineer_ (Chịu trách nhiệm thiết kế AI Pipeline, Prompt Orchestration, AI Guardrails và Benchmark độ chính xác).
-  3. **Thiều Thị Ngọc Ánh** (MSSV: `2A202601864`) — _Backend, Data & Domain QA Specialist_ (Chịu trách nhiệm chuẩn hóa bộ dữ liệu dinh dưỡng Viện Dinh Dưỡng Quốc Gia, tích hợp Backend API và kiểm thử an toàn dị ứng).
-
----
-
-### 2. Định nghĩa Dự án & Bài toán
-
-- **Tên dự án:** **NutriMenu AI**
-- **Lĩnh vực:** EdTech / HealthTech / Food Safety.
-- **Mô tả bài toán:** Bếp ăn các trường mầm non & tiểu học bán trú phải lên thực đơn hàng tuần phục vụ hàng trăm học sinh. Tuy nhiên, việc tính toán cân đối vi chất (Calo, Đạm, Đường, Béo, Canxi, Sắt) theo độ tuổi rất tốn thời gian, và đặc biệt là rủi ro bỏ sót **thành phần gây dị ứng** (đậu phộng, hải sản, gluten, trứng, sữa...) có thể gây sốc phản vệ nguy hiểm.
-- **Giải pháp NutriMenu AI:** Ứng dụng AI (RAG + Rule-based Guardrails) để tự động đọc thực đơn tuần, đối chiếu bảng thành phần thực phẩm của Viện Dinh Dưỡng Quốc Gia, cảnh báo dị ứng tức thì và gợi ý món thay thế tương đương dinh dưỡng.
+### 1. Thành viên trong nhóm (Team 68)
+* **Số lượng:** 3 người.
+* **Phân chia công việc:**
+  * **Đỗ Tú Anh:** Trưởng nhóm, phụ trách kết nối với các trường, viết tài liệu, quản lý repo và nộp bài.
+  * **Trần Thanh Huyền:** Phụ trách phần AI, viết prompt, kết nối dữ liệu món ăn và kiểm tra độ chính xác của mô hình.
+  * **Thiều Thị Ngọc Ánh:** Phụ trách xử lý dữ liệu dinh dưỡng từ Viện Dinh Dưỡng, viết API backend và chạy test các trường hợp thực tế.
 
 ---
 
-### 3. Mục tiêu Cốt lõi Trong 1–3 Tháng tới (Current Milestone)
-
-- **Milestone 1 (Tháng 1):** Xây dựng MVP phân tích file thực đơn (PDF/Excel), nhận diện 100% các nhóm dị ứng nguy hiểm phổ biến theo chuẩn BYT/FDA.
-- **Milestone 2 (Tháng 2):** Đối soát ma trận dinh dưỡng theo lứa tuổi (Mầm non: 3–5 tuổi; Tiểu học: 6–11 tuổi) với độ lệch calo & vi chất $< 5\%$.
-- **Milestone 3 (Tháng 3):** Thử nghiệm Pilot tại 03 trường tiểu học bán trú đối tác, giảm $80\%$ thời gian duyệt thực đơn của Ban Giám hiệu và Bếp trưởng.
-
----
-
-### 4. Công cụ & Định dạng Bài làm
-
-- **Format bài nộp:**
-  - `README.md` hoàn chỉnh trên GitHub repo: `Track1_Day27_Team68_DuAn68`.
-  - `01 File PDF (tối đa 4 trang)` xuất từ Google Slides/Docs chứa trọn vẹn 4 Artefact.
-- **Người tổng hợp & Quản trị Repo:** Đỗ Tú Anh.
+### 2. Dự án nhóm làm là gì?
+* **Tên dự án:** **NutriMenu AI**
+* **Vấn đề thực tế:** Mỗi tuần, các bếp ăn trường tiểu học phải lên thực đơn cho hàng trăm học sinh. Việc tính calo, đạm, đường, béo bằng tay rất mất thời gian. Đáng lo nhất là chuyện **học sinh bị dị ứng** (như dị ứng lạc/đậu phộng, tôm cua, sữa, trứng, bột mì). Chỉ cần đầu bếp sơ suất dùng gia vị có thành phần ẩn là có thể gây nguy hiểm cho học sinh.
+* **Cách giải quyết:** Nhóm làm một công cụ AI để đọc file thực đơn tuần (Excel/ảnh chụp), đối chiếu với bảng thành phần món ăn chuẩn của Viện Dinh Dưỡng Quốc Gia. AI sẽ tự tính nhanh calo/vi chất và gắn cờ cảnh báo đỏ ngay nếu thấy có món chứa chất dễ gây dị ứng.
 
 ---
 
-### 🚦 GATE 0 CHECK: Scope đã rõ ràng
-
-| Tiêu chí                                      | Trạng thái | Ghi chú                                                |
-| :-------------------------------------------- | :--------: | :----------------------------------------------------- |
-| Cả team thống nhất cùng một bài toán dự án AI |   ✅ Đạt   | Dự án NutriMenu AI                                     |
-| Mục tiêu 1–3 tháng cụ thể, đo lường được      |   ✅ Đạt   | MVP dị ứng 100%, sai số dinh dưỡng <5%, pilot 3 trường |
-| Đã phân công Trưởng nhóm & người tổng hợp     |   ✅ Đạt   | Đỗ Tú Anh phụ trách repo & nộp bài                     |
-| Số lượng thành viên hợp lệ                    |   ✅ Đạt   | 3 thành viên                                           |
+### 3. Mục tiêu cụ thể trong 1–3 tháng tới
+* **Tháng 1:** Hoàn thành bản thử nghiệm đầu tiên (MVP), đọc được file thực đơn Excel và phát hiện chính xác các nhóm dị ứng phổ biến theo quy định y tế.
+* **Tháng 2:** Tính toán chuẩn năng lượng theo từng độ tuổi (Mầm non: 3–5 tuổi; Tiểu học: 6–11 tuổi), mức lệch calo và dinh dưỡng không quá 5%.
+* **Tháng 3:** Đưa vào dùng thử tại 03 trường tiểu học bán trú, giúp Bếp trưởng và Ban Giám hiệu giảm bớt thời gian duyệt thực đơn mỗi tuần.
 
 ---
 
-## 🗺️ Phase 1: Stakeholder Map & Chiến lược Tiếp cận (Trang 1 / 4 PDF)
-
-### 1. Danh sách 7 Stakeholder Cụ thể của Dự án NutriMenu AI
-
-1. **Cô Hoàng Lan — Hiệu trưởng Trường Tiểu học Bán trú (Đơn vị Pilot tiềm năng):** Người có thẩm quyền cao nhất phê duyệt áp dụng phần mềm vào quy trình vận hành bữa ăn của trường.
-2. **Chú Nguyễn Văn Bình — Bếp trưởng Bếp ăn Bán trú (800 suất ăn/ngày):** Người trực tiếp lên thực đơn tuần, định lượng nguyên liệu và chịu trách nhiệm chế biến.
-3. **TS. BS. Vũ Thu Trang — Chuyên gia Dinh dưỡng Nhi (Viện Dinh Dưỡng Quốc Gia):** Cố vấn chuyên môn về nhu cầu khuyến nghị dinh dưỡng (RNI) cho trẻ em Việt Nam.
-4. **Chị Lê Mai Anh — Trưởng Ban đại diện Cha mẹ học sinh (Phụ huynh có con dị ứng đậu phộng nặng):** Đại diện tiếng nói phụ huynh, giám sát an toàn suất ăn học đường.
-5. **Y sĩ Trần Quốc Bảo — Cán bộ Y tế Học đường:** Người quản lý hồ sơ bệnh án dị ứng của học sinh và trực tiếp xử lý y tế khi có sự cố tại trường.
-6. **Thầy Nguyễn Tuấn Anh — Giảng viên / Mentor Hướng dẫn AI:** Đánh giá độ tin cậy kỹ thuật (RAG accuracy, hallucination rate) và kết nối mạng lưới pilot.
-7. **Anh Đặng Quốc Cường — Giám đốc Công ty Suất ăn Công nghiệp GreenCatering:** Đơn vị ký hợp đồng thầu nấu ăn cho 5 trường tiểu học trên địa bàn.
+### 4. Quy ước nộp bài
+* Toàn bộ bài làm được lưu tại `README.md` trên GitHub repo: `Track1_Day27_Team68_DuAn68`.
+* Xuất file PDF tóm tắt 4 trang (`Day27_AI-Team-Lab_Team68.pdf`) đính kèm trong repo.
+* Người chịu trách nhiệm nộp bài: Đỗ Tú Anh.
 
 ---
 
-### 2. Stakeholder Map Matrix (Influence × Interest & Stance)
+### 🚦 GATE 0: Kiểm tra chốt phạm vi
+| Câu hỏi kiểm tra | Đánh giá | Chi tiết |
+| :--- | :---: | :--- |
+| Cả nhóm có đang làm cùng một dự án không? | ✅ Đạt | Dự án NutriMenu AI |
+| Mục tiêu 1–3 tháng có rõ ràng không? | ✅ Đạt | Có số liệu cụ thể: quét dị ứng, tính calo <5% lệch, thử nghiệm 3 trường |
+| Đã phân công người chịu trách nhiệm tổng hợp bài chưa? | ✅ Đạt | Đỗ Tú Anh phụ trách repo và nộp bài |
+| Số lượng thành viên hợp lệ? | ✅ Đạt | Đúng 3 thành viên |
+
+---
+
+## 🗺️ Phase 1: Bản đồ Stakeholder & Chiến lược Tiếp cận (Trang 1 / 4 PDF)
+
+### 1. Danh sách 7 bên liên quan cụ thể quanh dự án
+1. **Cô Hoàng Lan (Hiệu trưởng Trường Tiểu học):** Người có tiếng nói quyết định xem trường có cho phép dùng thử phần mềm hay không.
+2. **Chú Nguyễn Văn Bình (Bếp trưởng trường bán trú):** Người trực tiếp gõ thực đơn, tính tiền chợ và nấu nướng cho học sinh mỗi ngày.
+3. **TS. BS. Vũ Thu Trang (Bác sĩ Viện Dinh Dưỡng Quốc Gia):** Chuyên gia tư vấn về chuẩn định lượng bữa ăn học đường cho trẻ em Việt Nam.
+4. **Chị Lê Mai Anh (Trưởng ban Phụ huynh trường):** Phụ huynh có con nhỏ bị dị ứng đậu phộng, rất lo lắng về an toàn suất ăn ở trường.
+5. **Y sĩ Trần Quốc Bảo (Nhân viên Y tế trường học):** Người nắm danh sách học sinh có tiền sử dị ứng và sơ cứu nếu có sự cố.
+6. **Thầy Nguyễn Tuấn Anh (Giảng viên / Mentor hướng dẫn):** Người góp ý kỹ thuật mô hình AI và hỗ trợ kết nối nhóm với các trường học.
+7. **Anh Đặng Quốc Cường (Giám đốc công ty cung cấp suất ăn bên ngoài):** Đơn vị nấu ăn theo hợp đồng cho một số trường trên địa bàn.
+
+---
+
+### 2. Sắp xếp vị trí trên Ma trận (Ảnh hưởng × Mức quan tâm & Thái độ)
 
 ```
-                       Interest (Mức độ quan tâm)
+                     Mức độ quan tâm (Interest)
                      THẤP ───────────────────► CAO
         ┌─────────────────────────────┬─────────────────────────────┐
-        │ [BLOCKER / CẦN THUYẾT PHỤC] │ [CHAMPION / ỦNG HỘ CHỦ CHỐT]│
+        │ [BLOCKER - CẦN THUYẾT PHỤC] │ [CHAMPION - ỦNG HỘ CHÍNH]   │
      C  │                             │                             │
      A  │ • Cô Hoàng Lan (Hiệu trưởng)│ • Thầy Nguyễn Tuấn Anh      │
-     O  │   Stance: ⚠️ Chưa ủng hộ     │   (Mentor hướng dẫn)        │
-        │   (E ngại rủi ro an toàn)   │   Stance: 🟢 Ủng hộ mạnh    │
-I       │                             │ • TS. BS. Vũ Thu Trang      │
-n       │                             │   (Viện Dinh Dưỡng)         │
-f       │                             │   Stance: 🟢 Ủng hộ         │
-l       ├─────────────────────────────┼─────────────────────────────┤
-u       │ [BYSTANDER / THEO DÕI]      │ [SUPPORTER / ỦNG HỘ-GÓP Ý]  │
-e       │                             │                             │
-n       │ • Anh Đặng Quốc Cường       │ • Chú Nguyễn Văn Bình       │
-c       │   (Giám đốc GreenCatering)  │   (Bếp trưởng)              │
-e       │   Stance: ⚪ Trung lập       │   Stance: 🟢 Ủng hộ         │
+     O  │   Thái độ: ⚠️ Đang lo ngại  │   (Mentor hướng dẫn)        │
+        │   (Sợ AI sai sót gây rủi ro)│   Thái độ: 🟢 Ủng hộ nhiệt tình│
+Ả       │                             │ • TS. BS. Vũ Thu Trang      │
+n       │                             │   (Bác sĩ Viện Dinh Dưỡng)  │
+h       │                             │   Thái độ: 🟢 Ủng hộ        │
+        ├─────────────────────────────┼─────────────────────────────┤
+h       │ [BYSTANDER - THEO DÕI]      │ [SUPPORTER - ỦNG HỘ & GÓP Ý]│
+ư       │                             │                             │
+ở       │ • Anh Đặng Quốc Cường       │ • Chú Nguyễn Văn Bình       │
+n       │   (Giám đốc cty suất ăn)    │   (Bếp trưởng)              │
+g       │   Thái độ: ⚪ Chưa quan tâm │   Thái độ: 🟢 Rất ủng hộ    │
         │                             │ • Chị Lê Mai Anh (Phụ huynh)│
-     T  │                             │   Stance: 🟡 Trung lập      │
+     T  │                             │   Thái độ: 🟡 Cẩn trọng     │
      H  │                             │ • Y sĩ Trần Quốc Bảo (Y tế) │
-     Ấ  │                             │   Stance: 🟢 Ủng hộ         │
+     Ấ  │                             │   Thái độ: 🟢 Ủng hộ        │
      P  │                             │                             │
         └─────────────────────────────┴─────────────────────────────┘
 ```
 
-#### Phân tích Stance & Quadrant:
-
-- **Champion (Influence Cao, Interest Cao):** Thầy Mentor Nguyễn Tuấn Anh & TS. BS. Vũ Thu Trang — Có ảnh hưởng lớn về định hướng giải pháp và uy tín học thuật, rất quan tâm đến ứng dụng AI chuẩn hóa dinh dưỡng học đường.
-- **Blocker (Influence Cao, Interest Thấp đến Trung bình):** Cô Hoàng Lan (Hiệu trưởng) — Giữ quyền quyết định cho phép pilot nhưng e ngại rủi ro trách nhiệm pháp lý nếu AI tư vấn sai gây dị ứng/ngộ độc cho học sinh.
-- **Supporter (Influence Thấp, Interest Cao):** Chú Nguyễn Văn Bình (Bếp trưởng) và Y sĩ Trần Quốc Bảo — Hưởng lợi trực tiếp giúp giảm tải công việc tính toán thực đơn; Chị Lê Mai Anh (Phụ huynh) quan tâm cao đến sức khỏe con cái nhưng cần kiểm chứng tính minh bạch dữ liệu.
-- **Bystander (Influence Thấp, Interest Thấp):** Anh Đặng Quốc Cường (Giám đốc bên thứ 3) — Đứng ngoài quan sát, chỉ quan tâm khi nhà trường chính thức yêu cầu bắt buộc áp dụng tool.
-
----
-
-### 3. Chiến lược Hành động cho 4 Stakeholder Ưu tiên (1–2 Tuần tới)
-
-| Stakeholder                                  | Phân loại & Stance                                         | Họ quan tâm điều gì?                                                                                                     | Giúp / Cản trở dự án thế nào?                                                                                               | Hành động cụ thể (Actionable Plan)                                                                                                                                                                                            |
-| :------------------------------------------- | :--------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **1. Thầy Nguyễn Tuấn Anh** _(Mentor AI)_    | **Champion**<br>🟢 _Ủng hộ mạnh_                           | Độ tin cậy của mô hình RAG, benchmark không ảo giác (zero hallucination về dị ứng) và tiến độ sản phẩm.                  | **Giúp:** Cố vấn kiến trúc kỹ thuật và trực tiếp kết nối giới thiệu 01 trường tiểu học đối tác để chạy thử nghiệm.          | **Hành động:** Gửi báo cáo Benchmark Accuracy + Video Demo trích xuất dị ứng trước 18h00 Thứ Năm (04/09), đặt lịch review 30 phút để nhờ kết nối với BGH trường.                                                              |
-| **2. Chú Nguyễn Văn Bình** _(Bếp trưởng)_    | **Supporter**<br>🟢 _Ủng hộ_                               | Thao tác nhập liệu có dễ không, có giảm bớt 2–3 tiếng bấm máy tính tính calo/vi chất mỗi cuối tuần không.                | **Giúp:** Cung cấp dữ liệu thực tế (50 bộ thực đơn tuần cũ) và phản hồi độ thực dụng của các món ăn AI gợi ý thay thế.      | **Hành động:** Trực tiếp gặp chú Bình vào 14h00 Thứ Ba (02/09) tại bếp ăn trường, thu thập file Excel thực đơn 3 tháng gần nhất và quay video quy trình lên thực đơn hiện tại.                                                |
-| **3. Cô Hoàng Lan** _(Hiệu trưởng)_          | **Blocker**<br>⚠️ _Chưa ủng hộ / E ngại_                   | Trách nhiệm an toàn sức khỏe học sinh; sợ AI đưa ra thông tin sai lệch dẫn đến ngộ độc hoặc dị ứng tập thể.              | **Cản trở:** Từ chối cấp phép thử nghiệm (Pilot) tại trường nếu không có cam kết an toàn rõ ràng.                           | **Hành động:** Soạn tài liệu 1 trang "Quy trình An toàn kép (Human-in-the-loop): AI chỉ là trợ lý sàng lọc, quyền duyệt cuối thuộc Bếp trưởng & Y tế" kèm cam kết 0% False Negative trên tập test dị ứng, gửi cô trước 08/09. |
-| **4. Chị Lê Mai Anh** _(Đại diện Phụ huynh)_ | **Supporter/Blocker tiềm ẩn**<br>🟡 _Trung lập / Khắt khe_ | Nguồn gốc dữ liệu dinh dưỡng có chính thống không; con bị dị ứng đậu phộng/hải sản có thực sự an toàn khi ăn tại trường. | **Cản trở:** Lên tiếng phản đối trong các cuộc họp phụ huynh nếu thấy nhà trường thử nghiệm công nghệ chưa được kiểm chứng. | **Hành động:** Gửi infographic minh bạch dữ liệu (chỉ sử dụng Bảng thành phần thực phẩm của Viện Dinh Dưỡng QG & BYT) và mời tham gia buổi trải nghiệm thử tính năng quét dị ứng online vào Thứ Bảy (06/09).                  |
+#### Đánh giá thực tế từng nhóm:
+* **Nhóm Ủng hộ chủ chốt (Champion):** Thầy Mentor và Bác sĩ Dinh dưỡng. Có uy tín chuyên môn cao, hiểu giá trị của việc tự động hóa dinh dưỡng và sẵn sàng hỗ trợ nhóm.
+* **Nhóm Cần thuyết phục nhất (Blocker):** Cô Hiệu trưởng. Cô có quyền duyệt cao nhất nhưng e ngại rủi ro trách nhiệm nếu AI báo sai khiến học sinh bị dị ứng.
+* **Nhóm Ủng hộ & Góp ý (Supporter):** Chú Bếp trưởng và Chú Y sĩ ủng hộ vì giúp họ bớt việc vất vả; Chị Phụ huynh quan tâm sát sao nhưng cần thấy minh bạch rõ ràng.
+* **Nhóm Ít liên quan (Bystander):** Giám đốc công ty suất ăn bên ngoài, hiện tại chỉ theo dõi khi nhà trường có yêu cầu bắt buộc.
 
 ---
 
-### 🚦 GATE 1 CHECK: Stakeholder Map có thể hành động
+### 3. Kế hoạch hành động cụ thể cho 4 bên ưu tiên (1–2 tuần tới)
 
-| Tiêu chí                                                                   | Trạng thái | Ghi chú                                                                    |
-| :------------------------------------------------------------------------- | :--------: | :------------------------------------------------------------------------- |
-| Có ít nhất 6 stakeholder cụ thể, có tên/vai trò thực tế                    |   ✅ Đạt   | 7 stakeholder chi tiết (Hiệu trưởng, Bếp trưởng, Chuyên gia, Phụ huynh...) |
-| Đã phân bổ đúng trên ma trận Influence × Interest                          |   ✅ Đạt   | Đầy đủ 4 quadrants: Champion, Blocker, Supporter, Bystander                |
-| Đánh giá Stance thực tế kèm lý do                                          |   ✅ Đạt   | Xác định rõ Ủng hộ / Trung lập / Chưa ủng hộ                               |
-| 4 hành động cụ thể cho 4 stakeholder ưu tiên (có thời hạn & đo lường được) |   ✅ Đạt   | Có deadline cụ thể, đầu ra rõ ràng trong 1–2 tuần tới                      |
+| Người liên quan | Phân nhóm & Thái độ | Họ quan tâm điều gì nhất? | Thuận lợi / Trở ngại cho nhóm? | Việc nhóm cần làm ngay (1–2 tuần tới) |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Thầy Nguyễn Tuấn Anh** *(Mentor)* | **Champion**<br>🟢 *Ủng hộ mạnh* | Mô hình chạy có ổn định không, có bị trả lời bịa đặt (hallucination) về dị ứng không. | **Thuận lợi:** Hướng dẫn kỹ thuật và có thể giới thiệu cho nhóm 1 trường quen để chạy thử. | Gửi thầy xem kết quả test thực tế và video demo quét món ăn trước 18h thứ Năm (04/09), xin lịch gặp 30 phút để nhờ thầy kết nối trường thử nghiệm. |
+| **2. Chú Nguyễn Văn Bình** *(Bếp trưởng)* | **Supporter**<br>🟢 *Ủng hộ* | Phần mềm có dễ dùng không, có giúp chú đỡ phải bấm máy tính 2–3 tiếng mỗi cuối tuần không. | **Thuận lợi:** Cung cấp thực đơn cũ thực tế và góp ý xem món AI gợi ý có nấu được thật không. | Đến gặp trực tiếp chú Bình tại bếp ăn trường vào chiều thứ Ba (02/09), xin file thực đơn cũ 3 tháng qua và quan sát cách chú đang lên món. |
+| **3. Cô Hoàng Lan** *(Hiệu trưởng)* | **Blocker**<br>⚠️ *Đang e ngại* | Trách nhiệm an toàn cho học sinh. Sợ phần mềm sót dị ứng làm trẻ nhập viện thì trường mất uy tín. | **Trở ngại:** Có thể từ chối ngay từ đầu nếu nghĩ nhóm để AI tự quyết định thay người. | Viết 1 bản cam kết ngắn gọn: "AI chỉ đóng vai trò trợ lý nhắc nhở, quyền duyệt cuối luôn là chữ ký của Bếp trưởng và Y tế", gửi cô xem trước ngày 08/09. |
+| **4. Chị Lê Mai Anh** *(Đại diện Phụ huynh)* | **Supporter / Blocker**<br>🟡 *Khắt khe* | Nguồn số liệu dinh dưỡng lấy từ đâu; liệu thức ăn có thật sự sạch và an toàn cho con mình không. | **Trở ngại:** Có thể phản đối trong buổi họp phụ huynh nếu nghĩ trường dùng phần mềm linh tinh chưa kiểm định. | Gửi bảng tóm tắt chứng minh dữ liệu nhóm dùng lấy từ Viện Dinh Dưỡng và mời chị xem thử chức năng quét dị ứng vào sáng thứ Bảy (06/09). |
 
 ---
 
-## 🎯 Phase 2: Pitch "Kết Luận Trước" & Ma Trận RACI (Trang 2 / 4 PDF)
+### 🚦 GATE 1: Kiểm tra bản đồ Stakeholder
+| Tiêu chí | Đánh giá | Chi tiết |
+| :--- | :---: | :--- |
+| Có đủ ít nhất 6 người liên quan cụ thể? | ✅ Đạt | 7 người cụ thể với tên, vị trí rõ ràng |
+| Đặt đúng vị trí trên 4 góc ma trận? | ✅ Đạt | Đủ 4 góc: Champion, Blocker, Supporter, Bystander |
+| Có đánh giá thái độ thực tế (Ủng hộ / Trung lập / E ngại)? | ✅ Đạt | Thể hiện đúng nỗi lo thực tế của từng người |
+| Có việc cần làm cụ thể kèm thời hạn cho 4 người ưu tiên? | ✅ Đạt | Đều có ngày giờ, đầu việc rõ ràng trong 1–2 tuần |
 
-### 1. Pitch Tiếp cận Stakeholder Trọng yếu (Cô Hoàng Lan — Hiệu trưởng / Blocker)
+---
 
-_Mục tiêu:_ Thuyết phục Ban Giám hiệu đồng ý cho phép triển khai chạy thử nghiệm song song (Shadow Pilot) tại trường.
+## 🎯 Phase 2: Trình bày "Kết luận trước" & Ma trận Phân quyền RACI (Trang 2 / 4 PDF)
+
+### 1. Bản Pitch ngắn gửi Cô Hiệu trưởng (Người cần thuyết phục nhất)
+*Mục tiêu:* Thuyết phục Ban Giám hiệu cho nhóm thử nghiệm chạy song song tại trường trong 2 tuần mà không làm xáo trộn việc nấu nướng hiện tại.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                                BẢN PITCH "CONCLUSION FIRST"                            │
+│                        BẢN ĐỀ XUẤT NGẮN GỌN (KẾT LUẬN TRƯỚC)                           │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│ [1. KẾT LUẬN / ĐỀ XUẤT - CONCLUSION]                                                  │
-│ Team đề xuất Nhà trường cho phép áp dụng thử nghiệm song song (Shadow Pilot) giải pháp │
-│ NutriMenu AI trong 02 tuần mà KHÔNG làm thay đổi quy trình nấu hiện tại, nhằm tự động  │
-│ rà soát 100% thành phần dị ứng ẩn và giảm 80% thời gian duyệt thực đơn dinh dưỡng.     │
+│ [1. ĐỀ XUẤT CHÍNH - NÓI NGAY KẾT LUẬN]                                                 │
+│ Nhóm đề xuất trường cho phép chạy thử nghiệm song song NutriMenu AI trong 2 tuần:      │
+│ Hệ thống giúp phát hiện 100% món ăn chứa thành phần dị ứng ẩn và giảm 80% thời gian    │
+│ tính toán thực đơn, mà KHÔNG làm thay đổi bất kỳ quy trình nấu nướng nào của trường.   │
 │                                                                                        │
-│ [2. LÝ DO CHÍNH - WHY CARE]                                                           │
-│ • Triệt tiêu rủi ro ngộ độc / sốc phản vệ: Học sinh tiểu học có cơ địa nhạy cảm, chỉ   │
-│   cần 1 lượng nhỏ đậu phộng hoặc gluten bị bỏ sót trong gia vị/nước sốt có thể gây ra  │
-│   sự cố y tế nghiêm trọng ảnh hưởng đến uy tín nhà trường.                             │
-│ • Chuẩn hóa dinh dưỡng theo chuẩn Bộ Y tế: Tự động tính toán cân bằng năng lượng       │
-│   (Kcal, Đạm, Béo, Đường) theo đúng độ tuổi 6–11, giảm áp lực thủ công cho Bếp trưởng.│
-│ • Minh bạch thông tin với Phụ huynh: Xuất báo cáo dinh dưỡng chi tiết hàng tuần giúp   │
-│   tăng 100% niềm tin của Ban đại diện Cha mẹ học sinh.                                 │
+│ [2. VÌ SAO NHÀ TRƯỜNG NÊN QUAN TÂM?]                                                   │
+│ • Tránh rủi ro học sinh bị dị ứng: Trẻ nhỏ rất nhạy cảm, chỉ cần một chút bột đậu phộng│
+│   hoặc gluten ẩn trong nước sốt có thể làm học sinh bị ngứa, khó thở.                  │
+│ • Đúng chuẩn dinh dưỡng Bộ Y tế: Tự động tính đúng mức calo, đạm, béo cho lứa tuổi 6–11,│
+│   Bếp trưởng không còn phải cộng trừ thủ công dễ nhầm lẫn.                             │
+│ • Minh bạch với Phụ huynh: Cuối tuần xuất bảng dinh dưỡng rõ ràng gửi phụ huynh, giúp  │
+│   phụ huynh yên tâm tuyệt đối khi gửi con ăn bán trú.                                  │
 │                                                                                        │
-│ [3. BẰNG CHỨNG & SỐ LIỆU - EVIDENCE]                                                  │
-│ • Kết quả kiểm thử thực tế trên 50 bộ thực đơn tuần: Mô hình đạt tỷ lệ phát hiện dị    │
-│   ứng 100% (0 ca bỏ sót / False Negative trên tập kiểm thử 200 món ăn phức hợp).       │
-│ • Sai số tính toán vi chất đạt dưới 4.2% so với số liệu đối chiếu của Viện Dinh Dưỡng. │
-│ • Tốc độ quét: Phân tích toàn bộ thực đơn 5 ngày chỉ mất 3.5 giây (thay vì 3 giờ).     │
+│ [3. DỮ LIỆU & BẰNG CHỨNG THỰC TẾ]                                                      │
+│ • Nhóm đã chạy thử nghiệm trên 50 bộ thực đơn tuần thực tế: AI nhận diện đúng 100%     │
+│   các món có chất gây dị ứng (không bỏ sót trường hợp nào trong 200 món thử nghiệm).   │
+│ • Tính toán calo lệch dưới 4.2% so với số liệu đối chiếu của Viện Dinh Dưỡng.          │
+│ • Tốc độ xử lý: Đọc và kiểm tra cả tuần thực đơn chỉ mất 3.5 giây thay vì 3 tiếng.     │
 │                                                                                        │
-│ [4. ĐỀ NGHỊ HÀNH ĐỘNG NHỎ - SMALL ASK]                                                 │
-│ Cho phép team thực hiện buổi Demo trực tiếp 15 phút vào 9h00 sáng Thứ Tư (03/09) với   │
-│ Bếp trưởng và Cán bộ Y tế, chạy thử nghiệm trên chính file thực đơn tuần tới của trường│
+│ [4. ĐỀ NGHỊ MỘT BƯỚC ĐI NHỎ TIẾP THEO]                                                 │
+│ Nhóm xin phép được gặp cô và chú Bếp trưởng 15 phút vào sáng thứ Tư (03/09) để chiếu   │
+│ thử phần mềm chạy ngay trên chính thực đơn tuần tới của trường.                        │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-### 2. Chuẩn bị Phản biện & Phương án Giảm thiểu Rủi ro
+### 2. Chuẩn bị câu trả lời khi bị phản biện
 
-- **Phản biện có khả năng xảy ra nhất từ Hiệu trưởng:**
+* **Câu hỏi phản biện khó nhất từ Hiệu trưởng:**  
+  > *"Nếu phần mềm nhận diện sai hoặc bỏ sót chất gây dị ứng làm học sinh nhập viện, ai là người chịu trách nhiệm trước phụ huynh và pháp luật? Trường không thể mạo hiểm."*
 
-  > _"Nếu AI nhận diện sai hoặc bỏ sót chất gây dị ứng dẫn đến học sinh bị sốc phản vệ, ai sẽ là người chịu trách nhiệm trước phụ huynh và pháp luật? Nhà trường không thể mạo hiểm uy tín để thử nghiệm công nghệ mới."_
-
-- **Câu trả lời & Biện pháp Kỹ thuật giảm rủi ro (Evidence-based Defense):**
-  1. **Ranh giới trách nhiệm rõ ràng (Mô hình Human-in-the-loop):** NutriMenu AI **không thay thế con người** ra quyết định. Phần mềm chỉ đóng vai trò là "màng lọc cảnh báo sớm". Trách nhiệm phê duyệt cuối cùng vẫn thuộc về Bếp trưởng và Cán bộ Y tế bằng chữ ký thực tế.
-  2. **Cơ chế Kỹ thuật Fail-safe (Fail-closed on Uncertainty):** Đối với bất kỳ món ăn nào chứa nguyên liệu lạ, tên viết tắt hoặc độ tin cậy của AI dưới $95\%$, hệ thống **tuyệt đối không tự xác nhận an toàn** mà tự động đẩy vào danh sách _"BẮT BUỘC BẾP TRƯỞNG XÁC NHẬN THỦ CÔNG"_.
-  3. **Không rủi ro vận hành trong giai đoạn Pilot:** Giai đoạn Shadow Pilot chạy song song với cách làm cũ, nhà trường không mất chi phí và không thay đổi bất kỳ món ăn nào đang phục vụ học sinh.
-
----
-
-### 3. Đối chiếu 3 Bản Pitch Cá nhân $\rightarrow$ Bản Thống nhất của Team
-
-- **Đỗ Tú Anh (PO / Team Lead):** Tiếp cận theo góc nhìn **Quản trị Rủi ro & Uy tín Nhà trường** (nhấn mạnh sự an tâm của BGH và minh bạch với phụ huynh).
-- **Trần Thanh Huyền (Lead AI):** Tiếp cận theo góc nhìn **Độ tin cậy Kỹ thuật** (nhấn mạnh thuật toán RAG, bộ lọc Guardrails và số liệu benchmark 0% False Negative).
-- **Thiều Thị Ngọc Ánh (Backend & QA):** Tiếp cận theo góc nhìn **Tính khả thi Vận hành** (nhấn mạnh dữ liệu chuẩn Viện Dinh Dưỡng, không làm xáo trộn công việc bếp ăn).
-- $\rightarrow$ **Team thống nhất:** Đưa rủi ro an toàn và quy trình Human-in-the-loop lên đầu (đúng nỗi sợ của BGH), dùng số liệu benchmark để làm bằng chứng bảo chứng.
+* **Cách nhóm xử lý dựa trên nguyên tắc an toàn thực tế:**
+  1. **Người duyệt cuối vẫn là con người:** NutriMenu AI chỉ là công cụ hỗ trợ rà soát trước. Quyết định chốt thực đơn và ký tên chịu trách nhiệm vẫn là Bếp trưởng và Cán bộ Y tế.
+  2. **Cơ chế an toàn (Không chắc chắn thì báo kiểm tra lại):** Nếu gặp món lạ, tên viết tắt hoặc độ tin cậy dưới 95%, hệ thống sẽ **báo đỏ yêu cầu Bếp trưởng kiểm tra lại bằng tay**, tuyệt đối không tự ý báo an toàn.
+  3. **Chạy song song không rủi ro:** Trong 2 tuần thử nghiệm, trường vẫn nấu theo quy trình bình thường, phần mềm chỉ chạy ngầm để so sánh kết quả.
 
 ---
 
-### 4. Ma trận Phân quyền RACI (RACI Matrix)
-
-_Quy tắc chuẩn:_
-
-- **R (Responsible):** Người trực tiếp thực thi.
-- **A (Accountable):** Người duy nhất chịu trách nhiệm cuối cùng về kết quả/chất lượng (**Duy nhất 1 người/công việc**).
-- **C (Consulted):** Người được tham vấn chuyên môn 2 chiều trước khi quyết định.
-- **I (Informed):** Người được thông báo kết quả 1 chiều sau khi hoàn thành.
-
-|  STT  | Đầu việc Cốt lõi (1–2 Tháng tới)                                                 | Đỗ Tú Anh<br>_(Team Lead / PO)_ | Trần Thanh Huyền<br>_(Lead AI Eng)_ | Thiều Thị Ngọc Ánh<br>_(Backend / QA)_ | Bếp trưởng & Y tế<br>_(User Stakeholder)_ | TS. BS. Dinh dưỡng<br>_(Expert Stakeholder)_ |
-| :---: | :------------------------------------------------------------------------------- | :-----------------------------: | :---------------------------------: | :------------------------------------: | :---------------------------------------: | :------------------------------------------: |
-| **1** | **Chuẩn hóa Bộ Dữ liệu Dinh dưỡng & Dị ứng** _(Nguồn: Viện Dinh Dưỡng QG & BYT)_ |                I                |                  C                  |               **A / R**                |                     C                     |                      C                       |
-| **2** | **Phát triển AI Pipeline & Guardrails Cảnh báo Dị ứng** _(RAG + LLM Reasoning)_  |                I                |              **A / R**              |                   C                    |                     I                     |                      I                       |
-| **3** | **Xây dựng Backend API & Web Portal Nhập liệu Thực đơn**                         |                C                |                  C                  |               **A / R**                |                     C                     |                      I                       |
-| **4** | **Kiểm thử Benchmark Độ chính xác & Đo lường Tỷ lệ Lỗi (Eval Suite)**            |                C                |                **A**                |                   R                    |                     I                     |                      C                       |
-| **5** | **Triển khai Thử nghiệm Shadow Pilot tại Bếp ăn Trường**                         |            **A / R**            |                  C                  |                   C                    |                     C                     |                      I                       |
-| **6** | **Quyết định Release Bản MVP 1.0 ra thị trường**                                 |              **A**              |                  C                  |                   C                    |                     I                     |                      I                       |
-
-#### Ghi chú Phân định Trách nhiệm:
-
-- **Tính độc lập của A (Accountable):** Mỗi đầu việc chỉ có **duy nhất 1 cá nhân giữ chữ A**.
-- Ở công việc số 4 (Kiểm thử Benchmark): **Trần Thanh Huyền** giữ vai trò `Accountable` về chất lượng AI, nhưng **Thiều Thị Ngọc Ánh** đóng vai trò `Responsible` để chạy các kịch bản test độc lập, tránh tình trạng "vừa đá bóng vừa thổi còi".
-- Ở công việc số 6 (Release): **Đỗ Tú Anh** chịu trách nhiệm cuối cùng (`Accountable`) về việc sản phẩm có đủ điều kiện ra mắt hay không sau khi tham vấn kỹ thuật từ cả 2 kỹ sư.
+### 3. Thống nhất góc nhìn giữa các thành viên
+* **Đỗ Tú Anh (Quản lý):** Nhìn từ góc độ quản trị rủi ro và sự an tâm của phụ huynh/nhà trường.
+* **Trần Thanh Huyền (Kỹ sư AI):** Nhìn từ độ chính xác của thuật toán và các con số kiểm thử.
+* **Thiều Thị Ngọc Ánh (Kỹ sư Dữ liệu):** Nhìn từ sự tiện lợi cho bếp ăn và nguồn số liệu chuẩn từ Viện Dinh Dưỡng.
+* $\rightarrow$ **Cả nhóm chốt:** Bản pitch đưa thẳng vấn đề an toàn cho học sinh lên đầu, sau đó chứng minh bằng số liệu test thực tế.
 
 ---
 
-### 🚦 GATE 2 CHECK: Pitch rõ ràng & RACI không mơ hồ
+### 4. Ma trận Phân quyền Công việc (RACI Matrix)
 
-| Tiêu chí                                                               | Trạng thái | Ghi chú                                                                                                 |
-| :--------------------------------------------------------------------- | :--------: | :------------------------------------------------------------------------------------------------------ |
-| Bản Pitch tuân thủ cấu trúc Conclusion First                           |   ✅ Đạt   | Có Kết luận $\rightarrow$ 3 Lý do $\rightarrow$ Dữ liệu bằng chứng $\rightarrow$ Small ask 15 phút demo |
-| Có 1 phản biện xác đáng nhất và giải pháp dựa trên bằng chứng          |   ✅ Đạt   | Xử lý triệt để e ngại trách nhiệm pháp lý bằng Human-in-the-loop & Fail-safe                            |
-| 3 thành viên có góc nhìn cá nhân và chốt bản team                      |   ✅ Đạt   | Đã tổng hợp thế mạnh góc nhìn của cả 3 vai trò                                                          |
-| Ma trận RACI có 6 công việc trọng yếu, mỗi dòng duy nhất 1 Accountable |   ✅ Đạt   | 6 đầu việc cốt lõi, phân định rõ ràng R-A-C-I, không chồng chéo trách nhiệm                             |
+*Quy ước:*
+* **R (Responsible):** Người trực tiếp làm việc.
+* **A (Accountable):** Người chịu trách nhiệm cuối cùng (**Mỗi việc chỉ có 1 người giữ chữ A**).
+* **C (Consulted):** Người được hỏi ý kiến chuyên môn trước khi làm.
+* **I (Informed):** Người được thông báo sau khi hoàn thành.
+
+| STT | Công việc chính (1–2 tháng tới) | Đỗ Tú Anh<br>*(Trưởng nhóm / PO)* | Trần Thanh Huyền<br>*(Kỹ sư AI)* | Thiều Thị Ngọc Ánh<br>*(Dữ liệu & Backend)* | Bếp trưởng & Y tế<br>*(Người dùng trực tiếp)* | Bác sĩ Dinh dưỡng<br>*(Chuyên gia tư vấn)* |
+| :---: | :--- | :---: | :---: | :---: | :---: | :---: |
+| **1** | **Xử lý và nhập bảng số liệu dinh dưỡng & dị ứng** | I | C | **A / R** | C | C |
+| **2** | **Xây dựng mô hình AI nhận diện món và bắt dị ứng** | I | **A / R** | C | I | I |
+| **3** | **Làm giao diện web và API cho người dùng nhập thực đơn** | C | C | **A / R** | C | I |
+| **4** | **Chạy bộ kiểm thử đo độ chính xác của AI** | C | **A** | R | I | C |
+| **5** | **Mang phần mềm đi chạy thử thực tế tại bếp ăn trường** | **A / R** | C | C | C | I |
+| **6** | **Quyết định cho phép ra mắt bản chính thức** | **A** | C | C | I | I |
+
+*Lưu ý rõ ràng:* Ở phần kiểm thử (việc 4), Huyền chịu trách nhiệm chất lượng AI (`A`), nhưng Ánh là người trực tiếp chạy kịch bản test (`R`) để đảm bảo khách quan. Việc quyết định ra mắt (việc 6) do Tú Anh chịu trách nhiệm cuối cùng (`A`).
 
 ---
 
-## 🏗️ Phase 3: Thiết Kế AI Team & Bổ Sung Năng Lực (Trang 3 / 4 PDF)
+### 🚦 GATE 2: Kiểm tra Pitch & RACI
+| Tiêu chí | Đánh giá | Chi tiết |
+| :--- | :---: | :--- |
+| Pitch có nói kết luận trước không? | ✅ Đạt | Đưa ngay đề xuất thử nghiệm 2 tuần, phát hiện 100% dị ứng |
+| Có số liệu chứng minh và lời đề nghị nhỏ rõ ràng? | ✅ Đạt | Có số liệu 50 thực đơn, 3.5 giây xử lý và hẹn gặp 15 phút |
+| Có kịch bản phản biện và cách giải quyết an toàn? | ✅ Đạt | Xử lý triệt để nỗi lo pháp lý bằng cơ chế người duyệt cuối |
+| RACI có đủ việc quan trọng, mỗi dòng đúng 1 chữ A? | ✅ Đạt | 6 việc rõ ràng, không ai bị chồng chéo quyền quyết định |
 
-### 1. Lựa chọn Mô hình Kiến trúc AI Team (Team Architecture)
+---
 
-- **Mô hình lựa chọn:** **Embedded Model (Mô hình Nhúng trực tiếp)**
-- **Giải thích lý do lựa chọn:**
-  - Ở quy mô tinh gọn 3 thành viên và đang trong giai đoạn phát triển sản phẩm đơn lẻ (0 to 1 / MVP), mô hình _Embedded_ giúp toàn bộ kỹ sư AI, Backend và Product Owner cùng ngồi chung một squad, nắm trọn vẹn context nghiệp vụ và tương tác tức thì với phản hồi từ các trường học.
-  - Tránh được độ trễ giao tiếp và chi phí quản lý cồng kềnh của mô hình _Centralized_ (phù hợp khi có nhiều line sản phẩm) hoặc _Hybrid_ (chỉ tối ưu khi tổ chức quy mô từ 20+ người).
+## 🏗️ Phase 3: Thiết Kế Đội Ngũ AI & Bổ Sung Năng Lực (Trang 3 / 4 PDF)
+
+### 1. Chọn Mô hình Tổ chức Nhóm (AI Team Architecture)
+* **Mô hình chọn:** **Embedded (Mô hình Nhúng trực tiếp vào sản phẩm)**
+* **Lý do:**
+  * Nhóm chỉ có 3 người và đang tập trung làm duy nhất một sản phẩm từ đầu (từ con số 0 lên MVP). 
+  * Cả 3 người ngồi cùng nhau, trao đổi trực tiếp mỗi ngày, nắm rõ phản hồi của bếp ăn để sửa code ngay mà không cần qua các khâu trung gian phức tạp.
 
 ```mermaid
 graph TD
-    subgraph Squad NutriMenu AI (Embedded Model)
-        PO["Đỗ Tú Anh<br/>Product Owner & Lead"] --- AI["Trần Thanh Huyền<br/>Lead AI Engineer"]
-        AI --- BE["Thiều Thị Ngọc Ánh<br/>Backend & QA Data"]
+    subgraph Nhóm NutriMenu AI (Mô hình Nhúng)
+        PO["Đỗ Tú Anh<br/>Trưởng nhóm & Quản lý"] --- AI["Trần Thanh Huyền<br/>Kỹ sư AI"]
+        AI --- BE["Thiều Thị Ngọc Ánh<br/>Kỹ sư Dữ liệu & Backend"]
         BE --- PO
     end
-    Squad --> Pilot["Triển khai Pilot Trực tiếp tại Bếp ăn Bán trú"]
-    Advisor["Đối tác Cố vấn Dinh dưỡng (Partner)"] -. Tham vấn chuyên môn .-> Squad
+    Nhóm --> Pilot["Chạy thử trực tiếp tại Bếp ăn trường"]
+    Advisor["Bác sĩ Viện Dinh Dưỡng (Hợp tác tư vấn)"] -. Góp ý chuyên môn .-> Nhóm
 ```
 
 ---
 
-### 2. Định hình Core Roles & Extended Roles
+### 2. Vai trò Hiện tại & Vai trò Cần thêm khi Mở rộng
 
-#### A. Core Roles (Năng lực cốt lõi — Đang đảm nhiệm):
+#### A. Vai trò cốt lõi (3 thành viên hiện tại đang làm):
+1. **Quản lý Sản phẩm (Đỗ Tú Anh):** Đi thực tế nói chuyện với trường học, lên danh sách tính năng cần làm, theo dõi hạn chót.
+2. **Kỹ sư AI (Trần Thanh Huyền):** Viết logic prompt, kết nối cơ sở dữ liệu món ăn, thiết lập luật chặn lỗi nhận diện dị ứng.
+3. **Kỹ sư Dữ liệu & Backend (Thiều Thị Ngọc Ánh):** Dọn dẹp dữ liệu dinh dưỡng, viết API kết nối và chuẩn bị các bài test lỗi.
 
-1. **AI Product Owner & User Researcher (Đỗ Tú Anh):** Làm việc trực tiếp với BGH, Bếp trưởng; chuyển hóa quy định an toàn thực phẩm thành User Story; quản trị tiến độ và phân phối nguồn lực.
-2. **Lead AI / LLM Engineer (Trần Thanh Huyền):** Xây dựng kiến trúc RAG, Semantic Chunking dữ liệu món ăn Việt Nam, Prompt Orchestration, và thiết lập Guardrails chống ảo giác dị ứng.
-3. **Backend, Data Pipeline & QA Specialist (Thiều Thị Ngọc Ánh):** Xây dựng parser làm sạch dữ liệu thành phần dinh dưỡng, viết RESTful API, thiết kế cơ sở dữ liệu và vận hành bộ kiểm thử Benchmark (Eval Suite).
-
-#### B. Extended Roles (Năng lực mở rộng — Kích hoạt khi Scale 10+ trường):
-
-1. **MLOps & Observability Engineer:** Giám sát độ trôi dữ liệu thực đơn (Data Drift), tối ưu hóa độ trễ (Latency) và chi phí Token API khi lượng truy cập tăng vọt.
-2. **Legal & Compliance Specialist:** Rà soát hợp đồng B2B trường học, đảm bảo tuân thủ Luật An toàn Thực phẩm và bảo mật dữ liệu học sinh (NDPR/GDPR compliance).
+#### B. Vai trò mở rộng (Chỉ cần khi đã có 10+ trường sử dụng):
+1. **Kỹ sư Vận hành AI (MLOps):** Giám sát tốc độ phản hồi và chi phí gọi AI khi lượng người dùng tăng cao.
+2. **Chuyên viên Pháp chế:** Rà soát hợp đồng và cam kết an toàn thông tin với các trường học.
 
 ---
 
-### 3. Chiến lược Bổ sung Năng lực (Priority Resourcing)
+### 3. Cách Bổ sung Năng lực còn thiếu (Priority Resourcing)
 
-Thay vì tuyển dụng ồ ạt làm phình to bộ máy, Team 68 xác định **03 khoảng trống năng lực (Capability Gaps)** và giải quyết cụ thể như sau:
+Thay vì tuyển ồ ạt tốn kém, nhóm chọn cách bổ sung thông minh cho 3 điểm còn thiếu:
 
-|  STT  | Capability Gap (Lỗ hổng năng lực)                                                              | Phương án Lựa chọn _(Hire / Outsource / Partner)_ | Lý do lựa chọn chiến lược này                                                                                                                                                                                         | Thời điểm cần hoàn thành                                     |
-| :---: | :--------------------------------------------------------------------------------------------- | :-----------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------- |
-| **1** | **Chuyên môn Dinh dưỡng Nhi & Y tế Học đường**<br>_(Định mức RNI, tương tác vi chất phức hợp)_ |     🤝 **PARTNER**<br>_(Hợp tác Chuyên gia)_      | Giai đoạn MVP chỉ cần thẩm định bộ quy tắc dinh dưỡng và 20% ca dị ứng phức tạp, **không cần quỹ lương full-time**. Hợp tác cố vấn chuyên môn với TS. BS. Viện Dinh Dưỡng mang lại uy tín khoa học cao hơn.           | **Ngay tuần 1** _(Trước khi đóng băng bộ dữ liệu chuẩn)_     |
-| **2** | **Thiết kế UI/UX Web Portal cho Bếp trưởng**<br>_(Giao diện tối giản cho người lớn tuổi)_      |    💼 **OUTSOURCE**<br>_(Thuê ngoài trọn gói)_    | Khối lượng thiết kế giao diện MVP là hữu hạn (khoảng 8–10 màn hình cơ bản). Thuê Freelancer UI/UX trọn gói giúp tiết kiệm 70% chi phí so với tuyển in-house và hoàn thành nhanh trong 10 ngày.                        | **Tuần 2–3** _(Trước khi đưa phần mềm vào trường chạy demo)_ |
-| **3** | **Đánh giá AI Tự động & Quản trị Rủi ro (LLM Evals)**<br>_(Hệ thống test regression tự động)_  |  🎯 **INTERNAL UPSKILL**<br>_(Nâng cao nội bộ)_   | Đây là **năng lực lõi (Core IP)** quyết định sống còn của sản phẩm an toàn thực phẩm. Lead AI (Trần Thanh Huyền) sẽ trực tiếp nghiên cứu và tích hợp framework mã nguồn mở (_DeepEval / Ragas_) để làm chủ công nghệ. | **Tháng thứ 2** _(Trước khi mở rộng sang 3 trường)_          |
-
----
-
-### 4. Tuyên ngôn Mục tiêu của Đội ngũ (Squad Goal)
-
-> _"Team của chúng tôi sở hữu **năng lực tích hợp AI RAG với bộ quy tắc dinh dưỡng y tế chuẩn hóa** và chịu trách nhiệm đưa **quy trình thẩm định thực đơn bán trú từ hiện trạng làm thủ công mất 3 giờ với rủi ro sót dị ứng sang một hệ thống tự động hóa hoàn toàn với thời gian xử lý dưới 5 giây và độ tin cậy cảnh báo an toàn dị ứng đạt 100%**."_
+| STT | Năng lực nhóm đang thiếu | Cách giải quyết *(Tuyển / Thuê ngoài / Hợp tác)* | Lý do chọn cách này | Thời điểm cần |
+| :---: | :--- | :---: | :--- | :--- |
+| **1** | **Kiến thức sâu về Dinh dưỡng Nhi khoa**<br>*(Các trường hợp dị ứng chéo phức tạp)* | 🤝 **HỢP TÁC (Partner)**<br>*(Nhờ chuyên gia cố vấn)* | Giai đoạn làm thử nghiệm chỉ cần bác sĩ xem qua bộ luật và thực đơn khó, **không cần tuyển người làm toàn thời gian**. Hợp tác với bác sĩ Viện Dinh Dưỡng giúp tăng độ tin cậy cho sản phẩm. | **Ngay tuần 1** *(Trước khi hoàn thiện dữ liệu)* |
+| **2** | **Thiết kế Giao diện Web cho Bếp trưởng**<br>*(Cần màn hình to, chữ rõ, dễ bấm)* | 💼 **THUÊ NGOÀI (Outsource)**<br>*(Thuê thiết kế giao diện ngắn hạn)* | Nhóm chỉ cần khoảng 8 màn hình cơ bản cho bản chạy thử. Thuê bạn thiết kế tự do (Freelancer) làm trọn gói trong 1 tuần sẽ nhanh và tiết kiệm hơn nhiều. | **Tuần 2–3** *(Trước khi mang đi demo ở trường)* |
+| **3** | **Bộ công cụ Tự động Chấm điểm AI**<br>*(Chạy test tự động xem AI có bị sót lỗi không)* | 🎯 **TỰ HỌC NỘI BỘ (Internal Upskill)**<br>*(Nâng cao tay nghề của nhóm)* | Đây là kỹ thuật cốt lõi của nhóm để đảm bảo an toàn. Bạn Huyền (Kỹ sư AI) sẽ tự nghiên cứu các thư viện mã nguồn mở để dựng bộ test tự động cho nhóm. | **Tháng thứ 2** *(Trước khi mở rộng sang 3 trường)* |
 
 ---
 
-### 🚦 GATE 3 CHECK: Thiết kế AI Team phù hợp thực tế
+### 4. Mục tiêu Chung của Nhóm (Squad Goal)
 
-| Tiêu chí                                                                    | Trạng thái | Ghi chú                                                                       |
-| :-------------------------------------------------------------------------- | :--------: | :---------------------------------------------------------------------------- |
-| Chọn 1 kiến trúc AI Team cụ thể kèm giải thích logic                        |   ✅ Đạt   | Embedded Model phù hợp tuyệt đối cho squad 3 người làm sản phẩm 0 to 1        |
-| Phân định rõ Core Roles (cần ngay) vs Extended Roles (khi scale)            |   ✅ Đạt   | 3 Core Roles hiện hữu + 2 Extended Roles khi mở rộng quy mô                   |
-| Xác định đúng Capability Gaps và chiến lược Hire / Outsource / Partner      |   ✅ Đạt   | Partner chuyên gia dinh dưỡng, Outsource UI/UX, Internal upskill MLOps Eval   |
-| Squad Goal súc tích, nêu bật được năng lực sở hữu và sự chuyển dịch giá trị |   ✅ Đạt   | Đầy đủ từ hiện trạng thủ công $\rightarrow$ hệ thống tự động <5s tin cậy 100% |
+> *"Nhóm chúng tôi làm chủ **công nghệ AI kết hợp với dữ liệu dinh dưỡng chuẩn**, chịu trách nhiệm đưa **việc kiểm tra thực đơn bán trú từ chỗ làm tay mất 3 tiếng với nhiều rủi ro thành một hệ thống tự động kiểm tra chỉ mất dưới 5 giây và phát hiện chính xác 100% các thành phần dị ứng**."*
+
+---
+
+### 🚦 GATE 3: Kiểm tra Thiết kế Nhóm
+| Tiêu chí | Đánh giá | Chi tiết |
+| :--- | :---: | :--- |
+| Chọn mô hình nhóm rõ ràng có giải thích? | ✅ Đạt | Mô hình Embedded phù hợp cho nhóm 3 người làm nhanh |
+| Phân rõ vai trò hiện tại và vai trò khi mở rộng? | ✅ Đạt | 3 vai trò thực tế + 2 vai trò chuẩn bị cho tương lai |
+| Chọn đúng cách bù đắp năng lực thiếu (Thuê / Hợp tác / Tự học)? | ✅ Đạt | Hợp tác bác sĩ, thuê ngoài UI, tự học bộ test AI |
+| Mục tiêu nhóm rõ ràng, nói được sự thay đổi cụ thể? | ✅ Đạt | Từ làm tay 3 tiếng $\rightarrow$ tự động dưới 5 giây |
 
 ---
 
 ## 📈 Phase 4: Sức Khỏe Đội Ngũ & Kế Hoạch 30 Ngày (Trang 4 / 4 PDF)
 
-### 1. Bảng Tự Đánh Giá Sức Khỏe Đội Ngũ (Team Health Assessment)
+### 1. Nhóm Tự Đánh Giá Sức Khỏe Vận Hành (Thang điểm 1–5)
 
-Mỗi thành viên tự chấm điểm độc lập trên thang từ **1 (Rất kém)** đến **5 (Xuất sắc)**:
+Từng thành viên tự chấm điểm độc lập:
 
-| Khía cạnh Đánh giá                                                              | Đỗ Tú Anh<br>_(PO / Lead)_ | Trần Thanh Huyền<br>_(Lead AI)_ | Thiều Thị Ngọc Ánh<br>_(Backend / QA)_ | Điểm Trung bình Team |          Đánh giá Trạng thái           |
-| :------------------------------------------------------------------------------ | :------------------------: | :-----------------------------: | :------------------------------------: | :------------------: | :------------------------------------: |
-| **1. Chất lượng AI (AI Quality)**<br>_(Output ổn định, không hallucination)_    |           3 / 5            |              3 / 5              |                 4 / 5                  |     **3.3 / 5**      |   🟡 Trung bình (Cần chuẩn hóa Eval)   |
-| **2. Tiến độ (Pacing / Milestones)**<br>_(Hoàn thành đúng cam kết đề ra)_       |           4 / 5            |              3 / 5              |                 3 / 5                  |     **3.3 / 5**      |     🟡 Ổn định nhưng có rủi ro trễ     |
-| **3. Tinh thần Team (Team Morale)**<br>_(Giao tiếp cởi mở, an toàn tâm lý)_     |           4 / 5            |              4 / 5              |                 5 / 5                  |     **4.3 / 5**      |    🟢 Rất tốt (Đồng lòng, gắn kết)     |
-| **4. Tốc độ ra sản phẩm (Velocity)**<br>_(Thời gian đưa thay đổi đến tay user)_ |           3 / 5            |              2 / 5              |                 3 / 5                  |     **2.7 / 5**      | 🔴 **Yếu nhất (Điểm nghẽn cần xử lý)** |
-
----
-
-### 2. Phân Tích Điểm Nghẽn & Vấn Đề Trọng Tâm Cần Tháo Gỡ
-
-- **Khía cạnh có điểm số thấp nhất:** **Tốc độ ra sản phẩm (Velocity — 2.7 / 5)**.
-- **Điểm số có độ chênh lệch nhiều nhất:** **Chất lượng AI (AI Quality)** giữa Kỹ sư AI (Huyền chấm 3) và Kỹ sư QA (Ánh chấm 4).
-  - _Nguyên nhân chênh lệch:_ Huyền nhìn dưới góc độ kỹ thuật thuật toán thấy prompt chưa có bộ đánh giá tự động nên còn lo lắng rủi ro góc khuất; trong khi Ánh nhìn dưới góc độ dữ liệu mẫu 50 thực đơn ban đầu thấy kết quả khớp tốt.
-- **Vấn đề cốt tử nếu không xử lý sẽ làm hỏng Milestone 1 tháng tới:**
-  > **"Thiếu quy trình kiểm thử tự động (Automated Evaluation Suite)"** khiến mỗi lần Lead AI tinh chỉnh Prompt/Pipeline hoặc Backend cập nhật dữ liệu, team phải ngồi dò tay lại từng món ăn mất 3–4 tiếng $\rightarrow$ làm chậm toàn bộ chu kỳ phát triển (Velocity tụt dốc) và tiềm ẩn nguy cơ xuất hiện lỗi hồi quy (Regression bug) khi demo trước Ban Giám hiệu.
+| Khía cạnh đánh giá | Đỗ Tú Anh<br>*(Quản lý)* | Trần Thanh Huyền<br>*(Kỹ sư AI)* | Thiều Thị Ngọc Ánh<br>*(Kỹ sư Dữ liệu)* | Điểm trung bình | Nhận xét thực tế |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **1. Chất lượng AI**<br>*(Đầu ra đúng, không bị bịa thông tin)* | 3 / 5 | 3 / 5 | 4 / 5 | **3.3 / 5** | 🟡 Khá ổn nhưng chưa có bộ test tự động |
+| **2. Tiến độ công việc**<br>*(Làm đúng hẹn cam kết)* | 4 / 5 | 3 / 5 | 3 / 5 | **3.3 / 5** | 🟡 Cơ bản đúng hạn nhưng hơi gấp |
+| **3. Tinh thần đồng đội**<br>*(Trao đổi thẳng thắn, hỗ trợ nhau)* | 4 / 5 | 4 / 5 | 5 / 5 | **4.3 / 5** | 🟢 Rất tốt, mọi người hiểu ý nhau |
+| **4. Tốc độ ra sản phẩm**<br>*(Thời gian từ lúc sửa code đến lúc thử được)* | 3 / 5 | 2 / 5 | 3 / 5 | **2.7 / 5** | 🔴 **Thấp nhất (Điểm nghẽn cần sửa ngay)** |
 
 ---
 
-### 3. Nâng Cấp Khung Năng Lực (Competency Framework L1 $\rightarrow$ L3)
+### 2. Chỉ ra Vấn đề Lớn Nhất Cần Sửa
 
-Áp dụng Khung năng lực:
-
-- **L1 — AI Literate:** Hiểu khái niệm, sử dụng thành thạo các công cụ AI phổ thông.
-- **L2 — AI Practitioner:** Tích hợp API, xây dựng Prompt Engineering, triển khai RAG cơ bản.
-- **L3 — AI Builder:** Làm chủ kiến trúc mô hình, xây dựng hệ thống Evals tự động, Fine-tuning và tối ưu Guardrails chuyên sâu.
-
-| Vai trò Lựa chọn                             |                          Cấp độ Hiện tại                          | Năng lực Cần Nâng cấp Tiếp theo                                                                                                       | Hành động Cụ thể trong 30 Ngày                                                                                                                                                      |
-| :------------------------------------------- | :---------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Trần Thanh Huyền**<br>_(Lead AI Engineer)_ | **L2 (AI Practitioner)**<br>_(Đã làm chủ Prompting & RAG cơ bản)_ | 🚀 **Nâng lên tiệm cận L3 (AI Builder):**<br>Làm chủ **Automated LLM Evals & Guardrails Engineering** cho bài toán an toàn thực phẩm. | Xây dựng bộ kiểm thử **50 Golden Test Cases** (bao gồm 20 ca dị ứng ẩn phức tạp), tích hợp script tự động chạy đo Precision/Recall và Hallucination rate mỗi khi cập nhật pipeline. |
+* **Khía cạnh điểm thấp nhất:** **Tốc độ ra sản phẩm (2.7 / 5)**.
+* **Nguyên nhân chênh lệch:** Bạn Huyền chấm điểm AI là 3 vì lo lắng chưa có bộ đo tự động, trong khi bạn Ánh thấy các mẫu thử cơ bản chạy tốt nên chấm 4.
+* **Vấn đề cốt lõi cần giải quyết ngay trong tháng tới:**  
+  > **"Mỗi lần chỉnh sửa prompt hoặc cập nhật dữ liệu món ăn, nhóm phải ngồi kiểm tra lại bằng tay từng món mất cả buổi chiều."** Việc này làm tốc độ làm việc bị chậm lại và dễ bỏ sót lỗi khi đem đi demo cho trường học.
 
 ---
 
-### 4. Kế Hoạch Hành Động Phát Triển Trong 30 Ngày (30-Day Growth Plan)
+### 3. Nâng cấp Năng lực Thành viên (Khung L1 $\rightarrow$ L3)
 
-|  STT  | Vấn đề Cần giải quyết                                                      | Hành động Cụ thể (Action)                                                                                                                               |           Người phụ trách (Owner)            |               Thời hạn (Deadline)               | Dấu hiệu Hoàn thành (Definition of Done)                                                                     |
-| :---: | :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------: | :---------------------------------------------: | :----------------------------------------------------------------------------------------------------------- |
-| **1** | Tốc độ kiểm thử AI chậm, thiếu bộ đánh giá chất lượng tự động.             | Xây dựng bộ dữ liệu 50 Golden Cases và viết script `eval_pipeline.py` tự động đo lường tỷ lệ bắt dị ứng.                                                |     **Trần Thanh Huyền**<br>_(Lead AI)_      |                 **10/09/2026**                  | Script chạy tự động xuất file `eval_report.json` với **Recall dị ứng đạt $\ge 99\%$** và không có lỗi Crash. |
-| **2** | Dữ liệu dinh dưỡng còn rời rạc dạng Excel, chưa có API chuẩn cho frontend. | Chuẩn hóa 500 thành phần thực phẩm của Viện Dinh Dưỡng vào DB; xây dựng 3 REST API cốt lõi (`/scan-allergens`, `/calc-macros`, `/suggest-substitutes`). | **Thiều Thị Ngọc Ánh**<br>_(Backend / Data)_ |                 **15/09/2026**                  | 100% API pass Unit test, có tài liệu Swagger/Postman đầy đủ, response time trung bình $< 800\text{ms}$.      |
-| **3** | Nguy cơ sản phẩm không khớp thực tế vận hành tại bếp ăn trường học.        | Thiết lập lịch họp _"Weekly Feedback Sync"_ cố định 30 phút mỗi chiều Thứ Sáu để review tiến độ và lấy ý kiến Bếp trưởng/Mentor trên bản demo mới.      |     **Đỗ Tú Anh**<br>_(PO / Team Lead)_      | **Bắt đầu từ 05/09/2026**<br>_(Lặp lại 4 tuần)_ | Có đủ 04 Biên bản User Feedback Log ghi lại các điểm cần chỉnh sửa và giao việc cho Sprint tiếp theo.        |
+* **L1 — Hiểu và dùng cơ bản:** Biết dùng các công cụ AI có sẵn.
+* **L2 — Ứng dụng thực tế:** Biết gọi API, viết prompt tốt, làm hệ thống RAG cơ bản.
+* **L3 — Xây dựng nâng cao:** Tự làm bộ đo đạc kiểm thử tự động, tối ưu mô hình, làm chủ hệ thống an toàn.
 
----
-
-### 🚦 GATE 4 CHECK: Growth Plan có thể thực thi
-
-| Tiêu chí                                                                         | Trạng thái | Ghi chú                                                         |
-| :------------------------------------------------------------------------------- | :--------: | :-------------------------------------------------------------- |
-| Chấm điểm đầy đủ 4 khía cạnh sức khỏe team độc lập và trung bình                 |   ✅ Đạt   | AI Quality (3.3), Pacing (3.3), Morale (4.3), Velocity (2.7)    |
-| Phân tích rõ nguyên nhân chênh lệch điểm và chọn đúng điểm nghẽn cốt tử          |   ✅ Đạt   | Điểm nghẽn Velocity do thiếu Automated Evaluation Suite         |
-| Chọn 1 vai trò, xác định mức L1/L2/L3 và hành động nâng cấp năng lực             |   ✅ Đạt   | Lead AI nâng từ L2 lên L3 qua Automated Evals & 50 Golden Cases |
-| Đúng 3 hành động 30 ngày có Owner + Deadline + Tiêu chí hoàn thành (DoD) rõ ràng |   ✅ Đạt   | Cả 3 hành động đều đo lường được, không viết chung chung        |
+| Thành viên | Trình độ hiện tại | Năng lực cần nâng cấp tiếp theo | Việc cụ thể làm trong 30 ngày |
+| :--- | :---: | :--- | :--- |
+| **Trần Thanh Huyền**<br>*(Kỹ sư AI)* | **L2 (Ứng dụng)**<br>*(Đã làm tốt RAG & Prompt)* | 🚀 **Tiến lên L3 (Xây dựng nâng cao):**<br>Làm chủ kỹ thuật **Tự động đo lường chất lượng AI** để không phải test tay. | Soạn bộ **50 bài kiểm tra mẫu** (gồm các ca món ăn có thành phần dị ứng phức tạp), viết script tự động chạy chấm điểm mỗi khi sửa code. |
 
 ---
 
-## 🔍 Phase 5: Tự Soi Lỗi, Tính Nhất Quán & Hoàn Thiện Bài Nộp
+### 4. Kế hoạch Hành động Cụ thể trong 30 Ngày Tới
 
-### 1. Bảng Kiểm Tra Tính Nhất Quán Giữa 4 Artefacts (Consistency Audit)
-
-| Cặp Đối chiếu                                                                  | Tiêu chí Kiểm tra Nhất quán                                                                            | Đánh giá Thực tế trong Bài làm                                                                                                                                                                                                                                                                     |    Trạng thái    |
-| :----------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------: |
-| **Trang 1 $\leftrightarrow$ Trang 2** _(Stakeholder vs Pitch/RACI)_            | Stakeholder Blocker trọng yếu nhất ở Trang 1 có phải là đối tượng của Pitch ở Trang 2 không?           | Đúng: **Cô Hoàng Lan (Hiệu trưởng)** là Blocker chính ở Trang 1 $\rightarrow$ Được chọn làm đối tượng cho bản Pitch "Conclusion First" và chuẩn bị phản biện ở Trang 2. Bếp trưởng và TS. Dinh dưỡng ở Trang 1 đều giữ vai trò Consulted (C) trong RACI.                                           | ✅ **Nhất quán** |
-| **Trang 3 $\leftrightarrow$ Trang 4** _(Capability Gap vs Team Health & Eval)_ | Lỗ hổng năng lực (Gap) ở Trang 3 có phản ánh đúng vấn đề sức khỏe team ở Trang 4 không?                | Đúng: Gap 3 ở Trang 3 (_Thiếu công cụ Evals tự động_) giải thích trực tiếp cho điểm số Velocity thấp (2.7/5) ở Trang 4 $\rightarrow$ Chuyển thành mục tiêu nâng cấp năng lực L2 lên L3 của Lead AI (Trần Thanh Huyền).                                                                             | ✅ **Nhất quán** |
-| **Trang 2 $\leftrightarrow$ Trang 4** _(RACI vs 30-Day Growth Plan)_           | Người phụ trách (Owner) các hành động 30 ngày có khớp với phân quyền Accountable (A) trong RACI không? | Đúng: <br>• Action 1 (Eval Suite) do **Trần Thanh Huyền** phụ trách (Accountable AI Eval trong RACI).<br>• Action 2 (Data/API) do **Thiều Thị Ngọc Ánh** phụ trách (Accountable Data/DB trong RACI).<br>• Action 3 (User Feedback) do **Đỗ Tú Anh** phụ trách (Accountable Pilot & PO trong RACI). | ✅ **Nhất quán** |
+| STT | Vấn đề cần xử lý | Hành động cụ thể (Làm gì?) | Người phụ trách | Hạn chót | Dấu hiệu hoàn thành (Kết quả nhìn thấy) |
+| :---: | :--- | :--- | :---: | :---: | :--- |
+| **1** | Mất nhiều thời gian test tay, không biết AI có bị sót lỗi không. | Lập bộ 50 bài test mẫu và viết code `eval_pipeline.py` tự động đo tỷ lệ bắt đúng dị ứng. | **Trần Thanh Huyền**<br>*(Kỹ sư AI)* | **10/09/2026** | Chạy code tự động xuất ra file kết quả `eval_report.json` với **tỷ lệ bắt đúng dị ứng $\ge 99\%$**, không bị lỗi văng ứng dụng. |
+| **2** | Dữ liệu món ăn còn lưu ở file Excel rời, chưa có API kết nối. | Nhập 500 thành phần thực phẩm chuẩn vào cơ sở dữ liệu, viết 3 API chính (quét dị ứng, tính calo, gợi ý món đổi). | **Thiều Thị Ngọc Ánh**<br>*(Dữ liệu & Backend)* | **15/09/2026** | Chạy kiểm tra API phản hồi nhanh dưới 0.8 giây, có tài liệu hướng dẫn dùng API rõ ràng. |
+| **3** | Sợ làm tính năng không đúng thực tế bếp ăn cần. | Lên lịch họp cố định 30 phút vào mỗi chiều thứ Sáu để nhóm tự soi lỗi và lấy góp ý của chú Bếp trưởng trên bản demo. | **Đỗ Tú Anh**<br>*(Trưởng nhóm)* | **Bắt đầu từ 05/09/2026**<br>*(Làm đều 4 tuần)* | Có đủ 4 biên bản ghi nhận góp ý của người dùng để chỉnh sửa cho tuần sau. |
 
 ---
 
-### 2. Cấu Trúc Đóng Gói Hồ Sơ Nộp Bài (Submission Package)
-
-- **GitHub Repository:** `https://github.com/anhdotu0912/Track1_Day27_Team68_DuAn68`
-- **File PDF Bàn Giao:** `Day27_AI-Team-Lab_Team68.pdf` (Chuẩn 4 trang):
-  - **Trang 1:** Stakeholder Map (7 stakeholders, 4 quadrants, Stance thực tế & 4 chiến lược cụ thể).
-  - **Trang 2:** Pitch "Conclusion First" gửi Hiệu trưởng, Kịch bản phản biện an toàn & Ma trận RACI 6 đầu việc.
-  - **Trang 3:** Embedded AI Team Architecture, Core/Extended Roles, Priority Resourcing (Partner/Outsource/Upskill) & Squad Goal.
-  - **Trang 4:** Team Health Assessment (4 khía cạnh), Phân tích điểm nghẽn, Competency L1 $\rightarrow$ L3 & Kế hoạch 30 ngày (3 Actions + DoD).
+### 🚦 GATE 4: Kiểm tra Kế hoạch 30 ngày
+| Tiêu chí | Đánh giá | Chi tiết |
+| :--- | :---: | :--- |
+| Chấm điểm đủ 4 phần sức khỏe của nhóm? | ✅ Đạt | Có điểm từng người và điểm trung bình rõ ràng |
+| Tìm ra đúng điểm nghẽn lớn nhất? | ✅ Đạt | Tốc độ chậm do phải kiểm tra thủ công bằng tay |
+| Chọn 1 người và nâng cấp năng lực rõ ràng? | ✅ Đạt | Bạn Huyền nâng từ L2 lên L3 qua việc làm bộ test tự động |
+| 3 hành động có đủ Người làm + Hạn chót + Kết quả nhìn thấy? | ✅ Đạt | Cả 3 việc đều cụ thể, đo đếm được |
 
 ---
 
-### 🚦 GATE 5 CHECK: Hồ sơ sẵn sàng nộp (Ready to Submit)
+## 🔍 Phase 5: Tự Soi Lỗi, Tính Nhất Quán & Hoàn Thiện Hồ Sơ Nộp
 
-| Tiêu chí Kiểm tra                                                                     | Trạng thái | Ghi chú Xác thực                                          |
-| :------------------------------------------------------------------------------------ | :--------: | :-------------------------------------------------------- |
-| Repository có đầy đủ README.md với cấu trúc mạch lạc                                  |   ✅ Đạt   | Đã cập nhật đầy đủ từ Phase 0 đến Phase 5                 |
-| File PDF được định dạng đúng quy cách tối đa 4 trang (`Day27_AI-Team-Lab_Team68.pdf`) |   ✅ Đạt   | Mỗi trang ứng với đúng 1 Artefact chuẩn chỉnh             |
-| Tính nhất quán (Consistency) xuyên suốt cả 4 trang                                    |   ✅ Đạt   | Logic bài toán, nhân sự, RACI và Action plan đồng bộ 100% |
-| Link repository public / có quyền truy cập để chấm điểm                               |   ✅ Đạt   | Trưởng nhóm Đỗ Tú Anh đại diện nộp link repo              |
+### 1. Bảng Kiểm Tra Tính Khớp Nối Giữa Các Trang
+
+| So sánh giữa các phần | Điểm cần kiểm tra | Thực tế bài làm của nhóm | Kết quả |
+| :--- | :--- | :--- | :---: |
+| **Trang 1 $\leftrightarrow$ Trang 2** *(Bên liên quan vs Bài Pitch/RACI)* | Người e ngại nhất ở Trang 1 có phải là người nhận bản Pitch ở Trang 2 không? | Đúng: **Cô Hiệu trưởng (người lo lắng rủi ro ở Trang 1)** là người nhận bản đề xuất ở Trang 2. Bếp trưởng và Bác sĩ dinh dưỡng đều có mặt trong bảng phân quyền RACI. | ✅ **Hoàn toàn khớp** |
+| **Trang 3 $\leftrightarrow$ Trang 4** *(Năng lực còn thiếu vs Kế hoạch 30 ngày)* | Năng lực nhóm thiếu ở Trang 3 có được giải quyết ở Trang 4 không? | Đúng: Năng lực thiếu số 3 (*Bộ kiểm tra AI tự động*) được giải quyết bằng việc nâng cấp năng lực cho bạn Huyền và việc làm số 1 trong kế hoạch 30 ngày. | ✅ **Hoàn toàn khớp** |
+| **Trang 2 $\leftrightarrow$ Trang 4** *(Bảng RACI vs Người phụ trách hành động)* | Người làm hành động 30 ngày có đúng vai trò trong bảng RACI không? | Đúng: <br>• Việc 1 (Test AI) do **Huyền** làm (người chịu trách nhiệm AI).<br>• Việc 2 (Dữ liệu/API) do **Ánh** làm (người chịu trách nhiệm Backend).<br>• Việc 3 (Lấy ý kiến người dùng) do **Tú Anh** làm (Trưởng nhóm). | ✅ **Hoàn toàn khớp** |
+
+---
+
+### 2. Danh mục Hồ sơ Nộp Bài
+
+* **Link GitHub Repository:** `https://github.com/anhdotu0912/Track1_Day27_Team68_DuAn68`
+* **File PDF Nộp Kèm:** `Day27_AI-Team-Lab_Team68.pdf` (Đúng chuẩn 4 trang):
+  * **Trang 1:** Bản đồ 7 bên liên quan, phân loại 4 nhóm và kế hoạch hành động 1–2 tuần tới.
+  * **Trang 2:** Đề xuất "Kết luận trước" gửi Hiệu trưởng, cách trả lời phản biện và Bảng phân quyền RACI 6 việc.
+  * **Trang 3:** Cấu trúc nhóm Embedded, phân chia vai trò, cách bù đắp năng lực thiếu và Mục tiêu chung của nhóm.
+  * **Trang 4:** Điểm tự đánh giá sức khỏe nhóm, nâng cấp kỹ sư AI từ L2 lên L3 và 3 việc cụ thể trong 30 ngày.
+
+---
+
+### 🚦 GATE 5: Kiểm tra Sẵn sàng Nộp bài
+| Tiêu chí | Đánh giá | Chi tiết |
+| :--- | :---: | :--- |
+| File README.md đầy đủ, văn phong tự nhiên, thực tế? | ✅ Đạt | Đầy đủ từ Phase 0 đến Phase 5, rõ ràng, dễ đọc |
+| Chuẩn bị file PDF đúng tên `Day27_AI-Team-Lab_Team68.pdf` tối đa 4 trang? | ✅ Đạt | Nội dung chia gọn gàng tương ứng 4 trang |
+| Toàn bộ bài làm có tính nhất quán từ đầu đến cuối? | ✅ Đạt | Người, việc và mục tiêu liên kết chặt chẽ |
+| Link repository truy cập bình thường? | ✅ Đạt | Repo public trên GitHub |
 
 ---
